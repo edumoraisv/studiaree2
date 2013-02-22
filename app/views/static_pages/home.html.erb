@@ -1,84 +1,14 @@
-<div class="5grid-layout">
-  <div class="row">
-    <div id="banner" class="12u">
-      <div class="container">
-        
+<div class="center hero-unit">
+  <h1>Bem vindo a Studiare!</h1>
 
-        <%= link_to image_tag("academiaplato.jpg", alt: "Academia_Plato", height:"300", width:"500"), 
-        signup_path %>
-        
-      </div>
-    </div>
-  </div>
+  <h2>
+    Esta é a home page da mais dinâmica e completa solução para o ENEM
+    e ensino médio.
+  </h2>
+
+  <%= link_to "Criar minha conta", signup_path, class: "btn btn-large btn-primary" %>
 </div>
-<div id="wrapper">
-  <div id="marketing">
-    <div class="5grid-layout">
-      <div class="row divider">
-        <div class="3u">
-          <section>
-            <h2 class="title">Método 100% customizado</h2>
-            <p class="subtitle">Studiare reconhece que cada aluno tem habilidades e necessidades únicas.
-            Nosso método é o mais inovador e personalizado para preparar seu filho para o ensino médio e 
-                        ENEM.</p>
-            <p>
-                <%= link_to image_tag("customizado.jpg", alt: "Customizado", height:"210"), signup_path %>
-               
-            </p>
-            <%= link_to "Mais detalhes", signup_path, 
-             class: "button-style2"%>
-          </section>
-        </div>
-        <div class="3u">
-          <section>
-            <h2 class="title">Dedicação total ao aluno</h2>
-            <p class="subtitle">Diferentemente de cursinhos e salas de aula com mais de 30 alunos por sala,
-            nosso método provê tutores com total foco e atenção no aluno. Isso garante que o aluno esteja sempre em 
-            dia com a matéria.</p>
-            <p>                
-              <%= link_to image_tag("dedicacao2.jpg", alt: "Dedicacao", height:"210"), signup_path %>
-            </p>
-            <%= link_to "Mais detalhes", signup_path, 
-             class: "button-style2"%>
-          </section>
-        </div>
-        <div class="3u">
-          <section>
-            <h2 class="title">Melhores tutores</h2>
-            <p class="subtitle"> Nossos tutores tiraram notas excepcionais
-                         no ENEM e frequentam as melhores escolas. Além disso, provemos um treinamento rigoroso e garantimos que o 
-                         tutor seja a pessoa certa para o seu filho.</p>
-            <p>
 
-            <%= link_to image_tag("tutor.jpg", alt: "Tutor", height:"210"), 
-            signup_path %>
-            
-            <%= link_to "Mais detalhes", signup_path, 
-             class: "button-style2"%>
-          </section>
-        </div>
-        <div class="3u">
-          <section>
-            <h2 class="title">Currículo focado no ENEM</h2>
-            <p class="subtitle">Seu filho aprende a matéria para 
-            passar de ano enquanto se prepara para passar nas melhores faculdades. Além disso nossa plataforma online
-            é interativa e permite o aluno estudar de qualquer lugar.</p>
-            <p>
-
-              <%= link_to image_tag("online.jpg", alt: "Online", height:"210"), signup_path %>
-            </p>
-            
-             <%= link_to "Mais detalhes", signup_path, 
-             class: "button-style2"%>
-            
-          </section>
-        </div>
-        
-
-      </div>
-    </div>
-  </div>
-  
-
+<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
 
 

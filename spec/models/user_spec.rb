@@ -26,7 +26,7 @@ describe User do
   it { should respond_to(:password_digest) }
   it { should respond_to(:password) }
   it { should respond_to(:password_confirmation) }
-
+  it { should respond_to(:remember_token) }
   it { should respond_to(:authenticate) }
 
 
@@ -119,9 +119,9 @@ describe User do
 
     before { visit signup_path }
 
-    let(:submit) { "Create my account" }
+    let(:submit) { "Criar minha conta" }
 
-    describe "with invalid information" do
+    describe "with invalid information" do      
       it "should not create a user" do
         expect { click_button submit }.not_to change(User, :count)
       end
@@ -129,10 +129,10 @@ describe User do
 
     describe "with valid information" do
       before do
-        fill_in "Name",         with: "Example User"
+        fill_in "Nome",         with: "Example User"
         fill_in "Email",        with: "user@example.com"
         fill_in "Password",     with: "foobar"
-        fill_in "Confirmation", with: "foobar"
+        fill_in "Confirmar Password", with: "foobar"
       end
 
       it "should create a user" do
@@ -140,7 +140,12 @@ describe User do
       end
     end
   end
+  
 
+    describe "remember token" do
+    before { @user.save }
+    its(:remember_token) { should_not be_blank }
+  end
 
 
 end
